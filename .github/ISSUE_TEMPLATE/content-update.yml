@@ -1,0 +1,146 @@
+name: 📝 Content Update
+description: Update text, documentation, or informational content on the website
+title: "[CONTENT] "
+labels: ["content", "documentation", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request updates to text, documentation, or other content on the school activity website.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: What type of content needs updating?
+      options:
+        - Website text/descriptions
+        - Documentation (README files)
+        - Help/instruction text
+        - Error messages
+        - School information (colors, branding, etc.)
+        - Activity descriptions
+        - User interface labels
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: input
+    id: content-location
+    attributes:
+      label: Where is this content located?
+      description: Which page or section contains the content that needs updating?
+      placeholder: e.g., "Main activity page", "Login screen", "README file", "Activity card for Chess Club"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: What does the current text/content say? (Copy and paste if possible)
+      placeholder: Paste or describe the current content that needs to be changed...
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-content
+    attributes:
+      label: Desired Content
+      description: What should the new content say?
+      placeholder: Provide the exact text you want to appear...
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: Reason for Change
+      description: Why does this content need to be updated?
+      placeholder: |
+        Examples:
+        - Information is outdated
+        - Contains errors
+        - Needs to reflect school policies
+        - Improving clarity for students/parents
+        - Updating school branding
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-priority
+    attributes:
+      label: How important is this update?
+      options:
+        - Critical - Contains incorrect information
+        - High - Affects daily operations
+        - Medium - Improves user experience
+        - Low - Minor improvement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Who primarily sees this content?
+      options:
+        - Students
+        - Teachers
+        - Parents/Guardians
+        - School Administrators
+        - Everyone (public-facing)
+        - Technical users only
+    validations:
+      required: true
+
+  - type: textarea
+    id: style-guidelines
+    attributes:
+      label: Style or Tone Requirements
+      description: Are there specific style guidelines this content should follow?
+      placeholder: |
+        Examples:
+        - Should match existing tone (formal/friendly/informative)
+        - Must follow school communication guidelines
+        - Should be appropriate for specific age group
+        - Include specific terminology or avoid certain words
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: review-requirements
+    attributes:
+      label: Review Requirements
+      description: Check any that apply
+      options:
+        - label: This content should be reviewed by administration before publishing
+        - label: This content needs to be consistent across multiple pages
+        - label: This change might affect other related content
+        - label: This content should be accessible/easy to read for all users
+
+  - type: textarea
+    id: related-changes
+    attributes:
+      label: Related Changes
+      description: Are there other places where similar content should be updated?
+      placeholder: List any other locations where similar changes should be made...
+    validations:
+      required: false
+
+  - type: input
+    id: deadline
+    attributes:
+      label: Deadline (if any)
+      description: When do you need this content updated?
+      placeholder: e.g., "Before parent night", "ASAP", "End of week"
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would help with this content update?
+      placeholder: Links to reference materials, examples of preferred style, etc.
+    validations:
+      required: false

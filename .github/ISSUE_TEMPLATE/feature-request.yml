@@ -1,0 +1,111 @@
+name: 🌟 Feature Request
+description: Request a new feature or enhancement for the school activity management system
+title: "[FEATURE] "
+labels: ["enhancement", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! Please provide detailed information so our Copilot coding agent can implement your request effectively.
+
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature Name
+      description: What would you like to call this feature?
+      placeholder: e.g., "Dark Mode Toggle", "Calendar View", "Student Difficulty Levels"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Problem Description
+      description: What problem does this feature solve? What need does it address?
+      placeholder: Describe the current situation and why this feature would be helpful...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this feature working
+      placeholder: Explain what the feature should do and how users would interact with it...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Which area of the system should this affect?
+      options:
+        - Student Activity Cards/List View
+        - Activity Registration/Unregistration
+        - Teacher Login/Authentication
+        - Activity Filtering and Search
+        - User Interface/Design
+        - Data Management
+        - Reports and Analytics
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: Who would primarily use this feature?
+      options:
+        - Students
+        - Teachers
+        - Both Students and Teachers
+        - School Administrators
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: What specific requirements must be met for this feature to be considered complete?
+      placeholder: |
+        List the specific behaviors and outcomes that must be achieved:
+        - [ ] Requirement 1
+        - [ ] Requirement 2
+        - [ ] Requirement 3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature to your daily work?
+      options:
+        - High - Needed for daily operations
+        - Medium - Would improve efficiency significantly
+        - Low - Nice to have enhancement
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that would help implement this feature?
+      placeholder: Screenshots, examples from other systems, specific design preferences, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: implementation-considerations
+    attributes:
+      label: Implementation Considerations
+      description: Check any that apply to your request
+      options:
+        - label: This should work on both desktop and mobile devices
+        - label: This feature should be optional/configurable
+        - label: This might affect existing data or user accounts
+        - label: This should maintain the current school branding/colors
+        - label: This needs to be simple for non-technical users

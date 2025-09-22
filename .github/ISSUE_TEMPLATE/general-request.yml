@@ -1,0 +1,146 @@
+name: ❓ General Request
+description: For requests that don't fit other categories or need custom assistance
+title: "[REQUEST] "
+labels: ["question", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template for general requests, questions, or needs that don't fit our other specific templates.
+
+  - type: input
+    id: request-title
+    attributes:
+      label: Request Summary
+      description: Briefly describe what you need help with
+      placeholder: e.g., "Help understanding the system", "Training on new features", "System configuration"
+    validations:
+      required: true
+
+  - type: textarea
+    id: detailed-request
+    attributes:
+      label: Detailed Description
+      description: Explain exactly what you need, what you're trying to accomplish, or what question you have
+      placeholder: Provide as much detail as possible about your request...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request-category
+    attributes:
+      label: What category best describes your request?
+      options:
+        - Technical Support/Help
+        - Training or How-To
+        - System Configuration
+        - Data Import/Export
+        - Integration with Other Systems
+        - Performance or Security Concern
+        - Compliance or Policy Question
+        - Custom Feature/Modification
+        - Other (please specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency-level
+    attributes:
+      label: How urgent and important is this request?
+      options:
+        - Emergency - System is broken/unusable
+        - High Priority - Blocking daily work
+        - Medium Priority - Would help efficiency
+        - Low Priority - When time allows
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: Current Situation
+      description: What is the current state? What have you already tried?
+      placeholder: |
+        Describe:
+        - What you're currently doing
+        - What isn't working
+        - What you've already attempted
+        - Any error messages or problems you've encountered
+    validations:
+      required: false
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: Desired Outcome & Success Criteria
+      description: What would success look like for this request? How will you know when this is complete?
+      placeholder: |
+        Describe:
+        - What you want to be able to do
+        - What result you're hoping for
+        - How you'll know the request is successfully completed
+        - What specific criteria must be met
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-users
+    attributes:
+      label: Who is affected by this request?
+      options:
+        - Just me
+        - My department/team
+        - All teachers
+        - All students
+        - Entire school
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-impact
+    attributes:
+      label: Impact on School Operations
+      description: How does this affect daily school operations or educational activities?
+      placeholder: Explain how this impacts teaching, student activities, or school administration...
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: assistance-type
+    attributes:
+      label: What type of assistance do you need?
+      description: Check all that apply
+      options:
+        - label: Code/programming changes
+        - label: Configuration or settings changes
+        - label: Documentation or instructions
+        - label: Training or walkthrough
+        - label: Investigation or analysis
+        - label: Testing or validation
+        - label: Not sure - need guidance
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional Information
+      description: Any other details that might be helpful?
+      placeholder: |
+        Include:
+        - Screenshots or examples
+        - Relevant deadlines
+        - Related systems or processes
+        - Constraints or limitations
+        - Previous similar requests
+    validations:
+      required: false
+
+  - type: textarea
+    id: preferred-communication
+    attributes:
+      label: Preferred Communication
+      description: How would you like to receive updates on this request?
+      placeholder: e.g., "Email updates", "In-person meeting", "Phone call", "Just update the issue"
+    validations:
+      required: false

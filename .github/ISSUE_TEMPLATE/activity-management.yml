@@ -1,0 +1,172 @@
+name: 🏫 Activity Management
+description: Add, modify, or remove school activities and their details
+title: "[ACTIVITY] "
+labels: ["activity-management", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request changes to school activities. Please provide complete information so our Copilot coding agent can make the changes accurately.
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: What type of activity change do you need?
+      options:
+        - Add a new activity
+        - Modify an existing activity
+        - Remove an activity
+        - Bulk update multiple activities
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Activity Name
+      description: What is the name of the activity?
+      placeholder: e.g., "Chess Club", "Drama Club", "Morning Fitness"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Activity Description
+      description: Provide a clear description of what this activity involves
+      placeholder: Describe what students will do in this activity...
+    validations:
+      required: true
+
+  - type: textarea
+    id: schedule-details
+    attributes:
+      label: Schedule Information
+      description: When does this activity meet?
+      placeholder: |
+        Days: (Monday, Tuesday, etc.)
+        Time: (3:15 PM - 4:45 PM)
+        Duration: (How many weeks/months)
+        Location: (If relevant)
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Maximum Number of Participants
+      description: How many students can participate?
+      placeholder: e.g., 15, 20, 30
+    validations:
+      required: true
+
+  - type: input
+    id: supervising-teacher
+    attributes:
+      label: Supervising Teacher
+      description: Which teacher will supervise this activity?
+      placeholder: e.g., "Ms. Rodriguez", "Mr. Chen"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: activity-category
+    attributes:
+      label: Activity Category
+      options:
+        - Sports/Physical Activities
+        - Arts and Creativity
+        - Academic/Educational
+        - Technology/STEM
+        - Social/Community Service
+        - Music and Performance
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty-level
+    attributes:
+      label: Difficulty/Grade Level (if applicable)
+      options:
+        - All Levels Welcome
+        - Beginner/Freshman Focus
+        - Intermediate/Sophomore-Junior
+        - Advanced/Senior Level
+        - Mixed Levels
+    validations:
+      required: false
+
+  - type: textarea
+    id: special-requirements
+    attributes:
+      label: Special Requirements or Equipment
+      description: Does this activity need any special equipment, permissions, or preparation?
+      placeholder: List any materials, equipment, or special arrangements needed...
+    validations:
+      required: false
+
+  - type: textarea
+    id: enrollment-criteria
+    attributes:
+      label: Enrollment Criteria
+      description: Are there any specific requirements for students to join?
+      placeholder: e.g., previous experience, grade level requirements, application process...
+    validations:
+      required: false
+
+  - type: input
+    id: activity-fee
+    attributes:
+      label: Activity Fee (if any)
+      description: Is there a cost for students to participate?
+      placeholder: e.g., "$25", "Free", "Fundraising required"
+    validations:
+      required: false
+
+  - type: textarea
+    id: modification-details
+    attributes:
+      label: Specific Changes Needed (for modifications)
+      description: If modifying an existing activity, what exactly needs to change?
+      placeholder: |
+        - Change schedule from... to...
+        - Update description to include...
+        - Increase/decrease participant limit...
+        - etc.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: When do you need this change? (Priority Level)
+      options:
+        - ASAP - Critical priority, needed immediately
+        - This week - High priority, within 7 days
+        - Next week - Medium priority, within 2 weeks
+        - Before next month - Lower priority
+        - No rush - Low priority, when convenient
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Additional Notes
+      description: Any other information that would be helpful?
+      placeholder: Context about why this change is needed, coordination with other activities, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have the authority to make this activity change
+          required: true
+        - label: I have coordinated with other relevant teachers/staff
+        - label: This change aligns with school policies and calendar

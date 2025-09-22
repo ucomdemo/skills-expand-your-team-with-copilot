@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 📚 Documentation
+    url: https://github.com/ucomdemo/skills-expand-your-team-with-copilot/blob/main/src/README.md
+    about: Check the documentation for help with using the system
+  - name: 💬 Direct Contact
+    url: mailto:tech-support@mergington.edu
+    about: For urgent issues or if you need immediate assistance

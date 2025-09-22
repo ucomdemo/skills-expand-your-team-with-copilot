@@ -1,0 +1,139 @@
+name: 🐛 Bug Report
+description: Report a problem or error in the school activity management system
+title: "[BUG] "
+labels: ["bug", "teacher-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug! Please provide detailed information so our Copilot coding agent can fix the issue quickly.
+
+  - type: input
+    id: bug-summary
+    attributes:
+      label: Bug Summary
+      description: A brief description of the problem
+      placeholder: e.g., "Login button doesn't work", "Wrong school colors displayed", "Student can't register for activities"
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Detailed Description
+      description: What exactly is happening that shouldn't be?
+      placeholder: Describe the problem in detail...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: What steps can someone follow to see this problem?
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. Type in...
+        4. See the problem...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: Describe what you expected to happen...
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: Describe what actually happens instead...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: Which part of the system has the problem?
+      options:
+        - Student Activity Display
+        - Activity Registration
+        - Teacher Login
+        - Activity Filtering
+        - Student Information Display
+        - Colors/Styling/Appearance
+        - Performance/Loading
+        - Error Messages
+        - Other (specify in description)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does this happen?
+      options:
+        - Always - Every time I try
+        - Usually - Most of the time
+        - Sometimes - Occasionally
+        - Rarely - Only happened once or twice
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact
+    attributes:
+      label: How does this affect your work? (Priority Level)
+      options:
+        - Critical Priority - Can't do essential tasks
+        - High Priority - Significantly impacts daily work
+        - Medium Priority - Causes some inconvenience
+        - Low Priority - Minor annoyance
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment-info
+    attributes:
+      label: Environment Information & Technical Constraints
+      description: What device/browser are you using? Any technical limitations?
+      placeholder: |
+        Browser: (Chrome, Firefox, Safari, etc.)
+        Device: (Computer, iPad, Phone, etc.)
+        Any technical constraints or requirements...
+    validations:
+      required: false
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Error Messages
+      description: Did you see any error messages? If so, what did they say?
+      placeholder: Copy and paste any error messages you saw...
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Temporary Workaround
+      description: Have you found any way to work around this problem?
+      placeholder: Describe any temporary solutions you've found...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might help fix this bug?
+      placeholder: Screenshots, similar issues you've noticed, when the problem started, etc.
+    validations:
+      required: false
